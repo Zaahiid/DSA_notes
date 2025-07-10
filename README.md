@@ -5,6 +5,13 @@
    1. [Time complexity](#21-big-o-time-complexity)
       1. [Linear](#211-linear-on)
       2. [Constant](#212-constant-o1)
+      3. [Quadratic](#223-quadratic-on2)
+      4. [Cubic](#224-cubic-on3)
+      5. [Logarithmic](#225-logarithmic-ologn)
+   2. [Space complexity](#22-big-o-space-complexity)
+      1. [Constant](#221-constant-o1)
+      2. [Linear](#222-linear-on)
+      3. [Logarithmic](#223-logarithmic-ologn) 
 3. [Arrays](#2-arrays)
    1. [Array Basics](#21-array-basics)
    2. [Array Operations](#22-array-operations)
@@ -95,13 +102,58 @@
 
    \[\text{Sum} = \frac{n(n + 1)}{2}\]
 
-- No loops or iterations are used.
-- Regardless of the value of `n`, the calculation is done in a **single step**.
-- Whether `n` is 10 or 10 million, the time taken stays **constant**.
+   - No loops or iterations are used.
+   - Regardless of the value of `n`, the calculation is done in a **single step**.
+   - Whether `n` is 10 or 10 million, the time taken stays **constant**.
 
-- This means:
-  - The execution time does **not** grow with the size of `n`.
-  - It is extremely fast and efficient, even for very large values of `n`.
+   - This means:
+      - The execution time does **not** grow with the size of `n`.
+      - It is extremely fast and efficient, even for very large values of `n`.
 
-  **💡 Note:**
-Even though the formula has multiple arithmetic operations (`*`, `+`, `/`), they are all performed in **constant time**, so the overall complexity is **still O(1)**.
+   **💡 Note:**
+   Even though the formula has multiple arithmetic operations (`*`, `+`, `/`), they are all performed in **constant time**, so the overall complexity is **still O(1)**.
+
+   ### 2.2.3 Quadratic O(n<sup>2</sup>)
+
+   ```javascript
+      for (i = 1; i <= n; i++) {
+         for(j = 1; <= i; j++) {
+            //Some code
+         }
+      }
+   ```
+
+   ### 2.2.4 Cubic O(n<sup>3</sup>)
+
+   ```javascript
+      for (i = 1; i <= n; i++) {
+         for(j = 1; <= i; j++) {
+            for(k = 1; <= j; k++>) {
+            //Some code
+            }
+         }
+      }
+   ```
+
+   ### 2.2.5 Logarithmic O(log<sub>n</sub>)
+
+   - Input size reduces by half every iteration
+
+   ## 2.2 Big-O Space complexity
+
+   ### 2.2.1 Constant **O(1)**
+
+   - No extra memory needed for the extra input e.g. Sorting algorithm which sorts array without creatoing another array.
+
+   ### 2.2.2 Linear **O(n)**
+
+   - Memory requirment increases with increasing input size.
+
+   ### 2.2.3 Logarithmic O(log<sub>n</sub>)
+
+   - Memory need grows but not at the same rate as input size.
+
+---
+**Big-O Complexity chart:**
+
+![alt text](image.png)
