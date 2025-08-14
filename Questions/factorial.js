@@ -82,3 +82,23 @@ console.log("findFactorialTwo: 5", findFactorialTwo(5))
 // minor efficiency improvement
 
 // It skips one iteration (when i = 1) and doesn't need an extra if (n === 0) check (though you can add it for clarity)
+
+
+// ======================================================
+
+// Recursive Factorial
+
+// n! = n * (n-1)!
+
+const recursiveFactorial = (n) => {
+    if (n === 0) return 1;
+    return n * recursiveFactorial(n - 1);
+}
+
+
+console.log("recursiveFactorial: 0", recursiveFactorial(0));
+console.log("recursiveFactorial: 1", recursiveFactorial(1));
+console.log("recursiveFactorial: 5", recursiveFactorial(5));
+
+
+// Big-O = O(n)
